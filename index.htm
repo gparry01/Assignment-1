@@ -1,0 +1,295 @@
+
+			<!DOCTYPE html>
+			<html>
+			<title>40199995</title>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+			<a name="top"></a>
+			<style>
+			body {font-family: "Aerial", Georgia, Serif;}
+			h1, h2, h3, h4, h5, h6 {
+			  font-family: "Playfair Display";
+			  letter-spacing: 5px;
+			}
+			</style>
+			<body>
+
+			<!-- Navbar (sit on top) -->
+			<div class="w3-top">
+			  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+			    <a href="#home" class="w3-bar-item w3-button">Grace Parry</a>
+			    <!-- Right-sided navbar links. Hide them on small screens -->
+			    <div class="w3-right w3-hide-small">
+			      <a href="#top" class="w3-bar-item w3-button">Home</a>
+			      <a href="page2.htm" class="w3-bar-item w3-button">Blog</a>
+			      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Header -->
+			<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<style>
+				* {box-sizing: border-box}
+				body {font-family: "Aerial", Georgia, Serif; margin:0}
+				.mySlides {display: none}
+				img {vertical-align: middle;}
+
+				/* Slideshow container */
+				.slideshow-container {
+				  max-width: 1400px;
+				  position: relative;
+				  margin: auto;
+				}
+
+				/* Next & previous buttons */
+				.prev, .next {
+				  cursor: pointer;
+				  position: absolute;
+				  top: 50%;
+				  width: auto;
+				  padding: 16px;
+				  margin-top: -22px;
+				  color: white;
+				  font-weight: bold;
+				  font-size: 18px;
+				  transition: 0.6s ease;
+				  border-radius: 0 3px 3px 0;
+				  user-select: none;
+				}
+
+				/* Position the "next button" to the right */
+				.next {
+				  right: 0;
+				  border-radius: 3px 0 0 3px;
+				}
+
+				/* On hover, add a black background color with a little bit see-through */
+				.prev:hover, .next:hover {
+				  background-color: rgba(0,0,0,0.8);
+				}
+
+				/* Caption text */
+				.text {
+				  color: #000000;
+				  font-size: 40px;
+				  position: absolute=;
+				  bottom: 8px;
+				  width: 100%;
+				  text-align: center;
+				}
+
+				/* Number text (1/3 etc) */
+				.numbertext {
+				  color: #f2f2f2;
+				  font-size: 12px;
+				  padding: 8px 12px;
+				  position: absolute;
+				  top: 0;
+				}
+
+				/* The dots/bullets/indicators */
+				.dot {
+				  cursor: pointer;
+				  height: 15px;
+				  width: 15px;
+				  margin: 0 2px;
+				  background-color: #bbb;
+				  border-radius: 50%;
+				  display: inline-block;
+				  transition: background-color 0.6s ease;
+				}
+
+				.active, .dot:hover {
+				  background-color: #717171;
+				}
+
+				/* Fading animation */
+				.fade {
+				  -webkit-animation-name: fade;
+				  -webkit-animation-duration: 1.5s;
+				  animation-name: fade;
+				  animation-duration: 1.5s;
+				}
+
+				@-webkit-keyframes fade {
+				  from {opacity: .4} 
+				  to {opacity: 1}
+				}
+
+				@keyframes fade {
+				  from {opacity: .4} 
+				  to {opacity: 1}
+				}
+
+				/* On smaller screens, decrease text size */
+				@media only screen and (max-width: 300px) {
+				  .prev, .next,.text {font-size: 11px}
+				}
+				</style>
+				</head>
+				<body>
+
+				<div class="slideshow-container">
+
+				<div class="mySlides fade">
+					
+				  <div class="numbertext">1 / 3</div>
+				 <a href= "page2.htm"> <img src="BLOG.jpg" alt="Keyboard" width="1450" height="700"> </a>
+				
+			</div>
+
+				<div class="mySlides fade">
+				
+				  <div class="numbertext">2 / 3</div>
+				  <a href= "#C1"> <img src="YOUTUBE.jpg" alt="Keyboard" width="1400" height="700"> </a>
+				 
+				</div>
+
+				<div class="mySlides fade">
+				  <div class="numbertext">3 / 3</div>
+				 <a href="#contact"> <img src="PHONE.jpg" alt="Keyboard" width="1450" height="700"> </a>
+				  
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+				<br>
+
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+
+				<script>
+				var slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1}    
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+				      slides[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				      dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				}
+				</script>
+
+			 
+			
+			</header>
+			
+
+			<!-- Page content -->
+			<div class="w3-content" style="max-width:1100px">
+
+			  <!-- Blog Section -->
+			  <style>p.indent{ padding-left: 1.8em }</style>
+			  <div class="w3-row w3-padding-64" id="about">
+			    <div class="w3-col m6 w3-padding-large w3-hide-small">
+			     <img src="giphy.gif" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+				 <img src="56e076aa-a8da-4f34-a506-5521893282db-pounds.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+   				 
+				
+				 
+				 <h1 class="w3-center"><u>REAL OR FAKE?:</u></h1>
+				<p class="w3-large"
+   			  align="justify"> Lisa Caprelli states the reason most companies start to advertise through social media because it allows them to become active, builds the brand and is key for keeping in connection with the customers. The easiest way of noticing a scam would be the opposite of this; not constantly active, creating a fake brand online instead of building on a real one in real life and once getting money of customers disappearing without any connection leading to them. Finding out whether a brand is real or not online can simply be down by a few minutes of research.</p>
+			  <img src="Screen Shot 2019-02-20 at 6.25.46 PM.jpg" alt="Table Setting" width="500" height="455">
+			
+			  
+			    </div>
+			    <div class="w3-col m6 w3-padding-large">
+			      <h1 class="w3-center"><u>INTRODUCTION</u></h1>
+			      <h5 class="w3-center"></h5>
+				  <p class="w3-large"
+				  align="justify">In 2017, on average a human being spent around 135 minutes per day on social media, scrolling through images of friends, humorous tweets/statuses, reacting to posts and being bombarded by marketing campaigns. Advertising is seen everywhere, all the time, but how has this new technology age been able to grab a consumer’s attention through the screen? With the large scale of the internet, false advertisement is becoming easier to get away with; currently 2019 only a month and half into the year Scamwatch states that the public has lost nearly $5,000,000 in scams online already this year. Fighting a battle to not click on a holiday to New York for 20 pounds or claiming a prize for IPad after using a Facebook game can be hard; so how do we stop ourselves and what can we look out for.<br> 
+				 
+				  
+				  <hr>
+			      
+				   <h1 class="w3-center"> <h1 id="C1"><u> YOUTUBE VIDEO OF THE WEEK:</u></h2>
+					   
+					   
+					   <h1 class="w3-center">
+				<a href="https://www.youtube.com/channel/UCT460YarK05PPqk28BuylWA/videos" style="color: rgb(0,255,0)"><font color="FF00CC">Filosophy</font></a> 
+					   
+				
+ 			      
+				  
+				  
+				  <h5 class="w3-center"></h5>
+ 				  <p class="w3-large"
+ 				  align="justify"> 5 COMMON INSTAGRAM SCAMS EVERYONE FALLS FOR: 
+				   
+			  <video width="500" height="240" controls>
+				  <source src="movie.mp4" type="video/mp4">
+				</video>
+				<hr>
+			   
+			   		  <!-- Blog Section -->
+			   </div>
+				 <hr> 
+				  <div 
+				  
+				  class="indent"
+				  class="indent"
+				  class="indent"class="w3-col m6 w3-padding-large">
+				  <h5 class="w3-center"></h5>
+	   			  <p class="w3-large"
+	   			  align="justify">As you can see from the on the left two images <a href="https://www.instagram.com/tescofood/" style="color: rgb(0,255,0)"><font color="FF00CC">@tescofood</font></a>  is a real business account, this can be known by the verification tick from Instagram. The blue verification tick means Instagram has confirmed that an account is the authentic presence of the public figure, celebrity or global brand it represents. This is an easy way to know whether businesses are real or fake; however not all real businesses have them, just larger organisations. As Jeffrey K.Rohrs states in Audience: Marketing in the Age of Subscribers, fans and following; ‘Getting an audience is HARD. Sustaining an audience is Hard. It demands consistency of thought, of purpose and of action over a long period of time’. Tesco’s Instagram also has a large number of followers, showing the user that many other users have followed and trusted this account; which would reassure the user as in real life if someone else recommends a product to you, you’re more likely to buy it. Furthermore, Tesco has a large amount of feed posts (2190), this shows that they have been on Instagram for a long period of time; a fake company trying to scam you would be able to stay active for a long period of time in order to avoid being caught. 
+
+<hr>
+		  
+ 			  <p class="w3-large"
+ 			  align="justify"> There are many differences between the two accounts in the photos above; looking at the <a href="https://www.instagram.com/kuluaairways/" style="color: rgb(0,255,0)"><font color="FF00CC">@kululaairways</font></a> account you can clearly see that it does not have the same presence as @tescofood. Firstly, it has no blue verification tick, which means Instagram has not verified that this is a real company unlike Tesco. With only 27 followers, this also reassures this account is fake as they are offering an incredible free holiday for the first 25,000 followers; if the account was real there would be a lot more attraction. With only one post on its feed, the account is very inactive, meaning that it does not have to reply to all the scammed users wanting a free holiday. There is 0 proof anywhere of the deal being real with 0 photos of the holiday or any person you can see behind the brand. Tesco has many professional photos which shows the user what they our buying adding trust. </p>
+			  <a href="page2.htm" style="color: rgb(0,255,0)"><font color="FF00CC">CONITINUE READING...</font></a>
+				
+			  </div>
+  
+			 
+<div>
+	
+<hr>
+
+			  <!-- Contact Section -->
+			  <div class="w3-container w3-padding-64" id="contact">
+			    <h1>Contact</h1><br>
+			    <p>ENQUIRES</p>
+			    <p class="w3-text-blue-grey w3-large"><b>Computer Room, SARC, Queens University Belfast BT9 5BQ</b></p>
+			    <p>You can also contact us by phone 07465986511 or email gparry01@qub.ac.uk or you can send us a message here:</p>
+			    <form action="/action_page.php" target="_blank">
+			      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+			      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="@"></p>
+			      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+			  <p> <a href="page3.html" class="w3-bar-item w3-button">SEND</a></p> 
+			    </form>
+			  </div>
+  
+			<!-- End page content -->
+			</div>
+
+			</body>
+			</html>
+
+			
